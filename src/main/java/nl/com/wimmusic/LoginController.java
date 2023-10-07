@@ -1,5 +1,6 @@
 package nl.com.wimmusic;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -21,16 +22,11 @@ public class LoginController implements Initializable {
 
 
     @FXML
-    protected void onLoginButtonClick() {
+    protected void onLoginButtonClick(ActionEvent actionEvent) {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
         loginButton.setText("Works");
-
-
-
-
-
     }
 
     @Override
