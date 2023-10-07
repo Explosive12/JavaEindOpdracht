@@ -7,11 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LoginApplication extends Application {
+public class WimMusicApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(WimMusicApplication.class.getResource("login-view.fxml"));
         fxmlLoader.setController(new LoginController());
         Scene scene = new Scene(fxmlLoader.load());
 

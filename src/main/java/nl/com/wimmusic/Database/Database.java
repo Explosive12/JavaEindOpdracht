@@ -1,26 +1,50 @@
 package nl.com.wimmusic.Database;
 
+import nl.com.wimmusic.models.Instrument;
 import nl.com.wimmusic.models.Person;
-import nl.com.wimmusic.models.UserRole;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Database {
 
+    private static final File DATABASE_FILE = new File("src/main/resources/com/WimMusic/ui/wimDatabase.dat");
+    private final List<Person> people = new ArrayList<>();
+    private final List<Instrument> instruments = new ArrayList<>();
 
-    private List<Person> people = new ArrayList<>();
+    public Database() {
+        if (!DATABASE_FILE.exists()) {
+            createDatabase();
+        }
+    }
     public List<Person> getPeople() {
         return people;
     }
-
-    protected void fillDatabase() {
-        people.add(new Person("admin", "Sully", "1234", LocalDate.of(1991, 3, 25), UserRole.Admin));
-        people.add(new Person("sales", "Wim Wiltenburg", "2345", LocalDate.of(1973, 11, 14), UserRole.Sales));
-        people.add(new Person("customer", "Jan Dammen", "3456", LocalDate.of(2000, 1, 2), UserRole.Sales));
-        people.add(new Person("customer", "Steve Jobs", "4567", LocalDate.of(1230, 8, 6), UserRole.Customer));
+    private void createDatabase() {
+        try {
+            Files.createFile(DATABASE_FILE.toPath());
+        } catch (FileAlreadyExistsException NoDuplicates) {
+            System.out.println("File couldn't be deleted, so overwriting is NOW");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        fillPeople();
+        fillInstruments();
     }
+
+    private void fillPeople() {
+    }
+
+    private void fillInstruments() {}
+
+
+
     protected void addPerson(Person person) {
         people.add(person);
     }

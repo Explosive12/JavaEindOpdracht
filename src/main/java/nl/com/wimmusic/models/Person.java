@@ -1,26 +1,24 @@
 package nl.com.wimmusic.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Map;
 
-public class Person {
+public class Person implements Serializable {
 
 
 
-    private String userName;
+    private int id;
+    private Map<Integer, Instrument> instruments;
     private String name;
-    private String password;
     private LocalDate birthDate;
-    private UserRole userRole;
 
-    public Person(String userName, String name, String password, LocalDate birthDate, UserRole userRole) {
-        this.userName = userName;
+    public Person(int id, Map<Integer, Instrument> instruments, String name, LocalDate birthDate) {
+        this.id = id;
+        this.instruments = instruments;
         this.name = name;
-        this.password = password;
         this.birthDate = birthDate;
-        this.userRole = userRole;
     }
-
-
 
     public String getName() {
         return name;

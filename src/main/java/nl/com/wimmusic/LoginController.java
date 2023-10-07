@@ -1,5 +1,6 @@
 package nl.com.wimmusic;
 
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,6 +21,10 @@ public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
 
+    @FXML
+    protected void onPasswordTextChange(StringProperty observable, String oldValue, String newValue) {
+
+    }
 
     @FXML
     protected void onLoginButtonClick(ActionEvent actionEvent) {
