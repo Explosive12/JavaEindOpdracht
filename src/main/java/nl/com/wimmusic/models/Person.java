@@ -6,33 +6,31 @@ import java.util.Map;
 
 public class Person implements Serializable {
 
+  private final int id;
+  private final Map<Integer, Instrument> instruments;
+  private String name;
+  private LocalDate birthDate;
 
+  public Person(int id, Map<Integer, Instrument> instruments, String name, LocalDate birthDate) {
+    this.id = id;
+    this.instruments = instruments;
+    this.name = name;
+    this.birthDate = birthDate;
+  }
 
-    private int id;
-    private Map<Integer, Instrument> instruments;
-    private String name;
-    private LocalDate birthDate;
+  public String getName() {
+    return name;
+  }
 
-    public Person(int id, Map<Integer, Instrument> instruments, String name, LocalDate birthDate) {
-        this.id = id;
-        this.instruments = instruments;
-        this.name = name;
-        this.birthDate = birthDate;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public LocalDate getBirthDate() {
+    return birthDate;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
+  public void setBirthDate(LocalDate birthDate) {
+    this.birthDate = birthDate;
+  }
 }

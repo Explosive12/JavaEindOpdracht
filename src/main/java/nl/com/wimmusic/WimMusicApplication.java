@@ -1,27 +1,31 @@
 package nl.com.wimmusic;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class WimMusicApplication extends Application {
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(WimMusicApplication.class.getResource("login-view.fxml"));
-        fxmlLoader.setController(new LoginController());
-        Scene scene = new Scene(fxmlLoader.load());
+  public static void main(String[] args) {
+    launch();
+  }
 
-        stage.setResizable(false);
-        stage.setTitle("Login");
-        stage.setScene(scene);
-        stage.show();
-    }
+  @Override
+  public void start(Stage stage) throws IOException {
 
-    public static void main(String[] args) {
-        launch();
+    try {
+      FXMLLoader fxmlLoader =
+          new FXMLLoader(WimMusicApplication.class.getResource("login-view.fxml"));
+      fxmlLoader.setController(new LoginController());
+      Scene scene = new Scene(fxmlLoader.load());
+
+      stage.setTitle("Login");
+      stage.setScene(scene);
+      stage.show();
+    } catch (IOException e) {
+      e.printStackTrace(); // Handle the exception appropriately
     }
+  }
 }

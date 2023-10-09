@@ -1,15 +1,12 @@
 package nl.com.wimmusic.Database;
 
-import nl.com.wimmusic.models.Instrument;
-import nl.com.wimmusic.models.Person;
-
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import nl.com.wimmusic.models.Instrument;
+import nl.com.wimmusic.models.Person;
 
 public class Database {
 

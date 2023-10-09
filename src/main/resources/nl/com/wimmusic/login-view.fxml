@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
+<?import javafx.scene.text.Font?>
 <GridPane alignment="CENTER" prefHeight="327.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
           xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
@@ -39,7 +38,7 @@
                 <Font size="13.0"/>
             </font>
         </Label>
-        <PasswordField onTextChange="onPasswordTextChange" fx:id="passwordField" prefHeight="19.0" prefWidth="200.0"
+        <PasswordField fx:id="passwordField" onTextChange="#onPasswordTextChange" prefHeight="19.0" prefWidth="200.0"
                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
         <TextField fx:id="usernameField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
     </children>
