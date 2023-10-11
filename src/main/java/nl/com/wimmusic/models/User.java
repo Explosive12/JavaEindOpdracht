@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public class User extends Person implements Serializable {
+
   private final String userName;
   private final String password;
 
@@ -18,5 +19,13 @@ public class User extends Person implements Serializable {
     super(id, instruments, name, birthDate);
     this.userName = userName;
     this.password = password;
+  }
+
+  public String getUserName() {
+    return userName;
+  }
+
+  public String getPassword() {
+    return password;
   }
 }
