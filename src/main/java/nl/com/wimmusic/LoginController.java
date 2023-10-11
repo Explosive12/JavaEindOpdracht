@@ -1,6 +1,5 @@
 package nl.com.wimmusic;
 
-import java.net.Authenticator;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.property.StringProperty;
@@ -65,7 +64,6 @@ public class LoginController implements Initializable {
 
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {
-
 
   }
 }
