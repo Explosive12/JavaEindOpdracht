@@ -8,6 +8,8 @@ import java.util.List;
 
 import nl.com.wimmusic.models.*;
 
+import static nl.com.wimmusic.models.UserRoles.Manager;
+
 public class Database {
 
     private static final File DATABASE_FILE = new File("src/main/resources/com/WimMusic/ui/wimDatabase.dat");
@@ -25,8 +27,7 @@ public class Database {
     }
 
     private void fillUsers() {
-        userList.add(new User(1, null, "Wim", null, "Steve", "Jobs"));
-        userList.add(new Sales(2, null, "Wim", null, "Wim", "Apple1234%"));
+
     }
 
     private void fillInstruments() {

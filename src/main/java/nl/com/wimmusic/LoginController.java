@@ -51,10 +51,7 @@ public class LoginController implements Initializable {
       if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
         System.out.println("Login successful");
 
-        // check what role the user is
-        // if user is a sales person, open sales view
-        // if user is a manager, open manager view
-        // if user is a musician, open musician view
+
 
         return;
       }
