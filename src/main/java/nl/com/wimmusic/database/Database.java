@@ -1,14 +1,11 @@
-package nl.com.wimmusic.Database;
+package nl.com.wimmusic.database;
 
 import java.io.File;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import nl.com.wimmusic.models.*;
-
-import static nl.com.wimmusic.models.UserRoles.Manager;
 
 public class Database {
 
@@ -18,7 +15,6 @@ public class Database {
 
     public Database() {
         loadDatabase();
-
     }
 
     private void loadDatabase() {
@@ -27,7 +23,8 @@ public class Database {
     }
 
     private void fillUsers() {
-
+        userList.add(new Sales(1, null, "sales", "sales1234%", "Sales", "Sales", LocalDate.of(1990, 1, 1)));
+        userList.add(new Manager(2, null, "manager", "manager1234%", "Manager", "Manager", LocalDate.of(1990, 2, 2)));
     }
 
     private void fillInstruments() {

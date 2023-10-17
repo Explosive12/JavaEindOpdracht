@@ -6,9 +6,14 @@ import java.util.Map;
 
 public class User implements Serializable {
 
-
-
   private final int id;
+  private final Map<Integer, Instrument> instruments;
+  private final String userName;
+  private final String password;
+  private String firstName;
+  private String lastName;
+  private LocalDate birthDate;
+  protected UserRoles userRole;
 
   public User(int id, Map<Integer, Instrument> instruments, String userName, String password, String firstName, String lastName, LocalDate birthDate) {
     this.id = id;
@@ -20,15 +25,6 @@ public class User implements Serializable {
     this.birthDate = birthDate;
     this.userRole = UserRoles.None;
   }
-
-  private final Map<Integer, Instrument> instruments;
-  private final String userName;
-  private final String password;
-  private String firstName;
-  private String lastName;
-  private LocalDate birthDate;
-  protected UserRoles userRole;
-
 
 
   public String getUserName() {

@@ -6,4 +6,6 @@ module nl.com.wimmusic {
       javafx.fxml;
 
   exports nl.com.wimmusic;
+    exports nl.com.wimmusic.ui;
+    opens nl.com.wimmusic.ui to javafx.fxml;
 }

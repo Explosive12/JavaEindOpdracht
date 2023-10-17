@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nl.com.wimmusic.ui.LoginController;
 
 public class WimMusicApplication extends Application {
 
@@ -21,7 +22,7 @@ public class WimMusicApplication extends Application {
       fxmlLoader.setController(new LoginController());
       Scene scene = new Scene(fxmlLoader.load());
 
-      stage.setTitle("Login");
+      stage.setTitle("Wim's Music Dungeon - Login");
       stage.setScene(scene);
       stage.show();
     } catch (IOException e) {

@@ -2,8 +2,6 @@ package nl.com.wimmusic.models;
 
 public class Instrument {
 
-
-
   private int id;
   private int quantity;
   private String name;
