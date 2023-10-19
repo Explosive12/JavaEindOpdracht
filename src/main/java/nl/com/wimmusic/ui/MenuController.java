@@ -24,7 +24,7 @@ public class MenuController extends BaseController implements Initializable {
 
   @FXML
   protected void onCreateOrderButtonClick() {
-    loadScene("create-order-view.fxml", new CreateOrderController());
+    loadScene("create-order-view.fxml", new CreateOrderController(user, database));
   }
 
   @FXML
@@ -34,7 +34,7 @@ public class MenuController extends BaseController implements Initializable {
 
   @FXML
   protected void onOrderHistoryClick() {
-    loadScene("order-inventory-view.fxml", new OrderInventoryController());
+    loadScene("order-history-view.fxml", new OrderHistoryController());
   }
 
   @Override

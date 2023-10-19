@@ -1,6 +1,9 @@
 package nl.com.wimmusic.models;
 
-public enum InstrumentType {
+import java.io.Serializable;
+
+public enum InstrumentType implements Serializable {
+  None,
   Guitars,
   Bass,
   Drums,

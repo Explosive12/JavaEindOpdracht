@@ -6,8 +6,8 @@ import java.util.Map;
 public class Sales extends User {
 
 
-    public Sales(int id, Map<Integer, Instrument> instruments, String userName, String password, String firstName, String lastName, LocalDate birthDate) {
-        super(id, instruments, userName, password, firstName, lastName, birthDate);
+    public Sales(int id, String userName, String password, String name) {
+        super(id, userName, password, name);
         this.userRole = UserRoles.Sales;
     }
 }

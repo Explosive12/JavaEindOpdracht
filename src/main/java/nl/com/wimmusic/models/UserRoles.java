@@ -1,3 +1,5 @@
 package nl.com.wimmusic.models;
 
-public enum UserRoles {None, Sales, Manager}
+import java.io.Serializable;
+
+public enum UserRoles implements Serializable {None, Sales, Manager}

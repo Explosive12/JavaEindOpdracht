@@ -55,24 +55,24 @@ public class LoginController implements Initializable {
         System.out.println("Login successful");
         Stage stage = (Stage) loginButton.getScene().getWindow();
         stage.close();
-        loadDashboard(user);
+        loadWimMusic(user);
         return;
       }
     }
     loginFailedLabel.setVisible(true);
   }
 
-  private void loadDashboard(User user) {
+  private void loadWimMusic(User user) {
     try {
       FXMLLoader fxmlLoader = new FXMLLoader(WimMusicApplication.class.getResource("menu-view.fxml"));
       MenuController menuController = new MenuController(user, database);
       fxmlLoader.setController(menuController);
-      Stage dashboard = new Stage();
+      Stage stage = new Stage();
       Scene scene = new Scene(fxmlLoader.load());
 
-      dashboard.setScene(scene);
-      dashboard.setTitle("Wim's music dungeon - Dashboard");
-      dashboard.showAndWait();
+      stage.setScene(scene);
+      stage.setTitle("Wim's music dungeon - Dashboard");
+      stage.showAndWait();
     } catch (IOException e) {
       throw new RuntimeException("Error loading FXML file", e);
     } catch (Exception e) {
