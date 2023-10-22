@@ -22,10 +22,10 @@ public class Database implements Serializable {
   }
 
   private void fillInstruments() {
-    instruments.add(new Instrument(1, 20, "The Cool Guitar", InstrumentType.Guitars, false));
-    instruments.add(new Instrument(2, 20, "The Cool Bass", InstrumentType.Bass, false));
-    instruments.add(new Instrument(3, 20, "The Cool Drums", InstrumentType.Drums, false));
-    instruments.add(new Instrument(4, 20, "The Cool Keyboard", InstrumentType.Keyboards, false));
+    instruments.add(new Instrument(1, 15, "The Cool Guitar", "Made out of the best strings", 102.25, InstrumentType.Guitars, false));
+    instruments.add(new Instrument(2, 20, "The Cool Bass", "Just like the fish!", 55.23, InstrumentType.Bass, false));
+    instruments.add(new Instrument(3, 25, "The Cool Drums", "Drum till you make the neighbours deaf!",99.99,InstrumentType.Drums, false));
+    instruments.add(new Instrument(4, 35, "The Cool Keyboard", "You can pretend you know how to play all the instruments!",120, InstrumentType.Keyboards, false));
   }
 
   private void createDatabase() {

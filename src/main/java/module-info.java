@@ -8,4 +8,6 @@ module nl.com.wimmusic {
   exports nl.com.wimmusic;
     exports nl.com.wimmusic.ui;
     opens nl.com.wimmusic.ui to javafx.fxml;
+    opens nl.com.wimmusic.models to javafx.base;
+
 }

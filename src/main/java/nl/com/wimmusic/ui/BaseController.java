@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import nl.com.wimmusic.Exception.CantFindFXMLException;
 import nl.com.wimmusic.WimMusicApplication;
 import nl.com.wimmusic.database.Database;
@@ -21,6 +23,21 @@ public class BaseController {
     public BaseController(User user, Database database) {
         this.user = user;
         this.database = database;
+    }
+
+    public void loadDialog(String name, Object controller, String title) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(WimMusicApplication.class.getResource(name));
+            fxmlLoader.setController(controller);
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle(title);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.show();
+        } catch (CantFindFXMLException | IOException  e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void loadScene(String name, Object controller) {
