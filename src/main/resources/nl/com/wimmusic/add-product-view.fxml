@@ -2,47 +2,66 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<?import javafx.scene.control.cell.PropertyValueFactory?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="479.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="29.0" layoutY="30.0" text="Select product">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-       <TableView fx:id="productTableView" layoutX="21.0" layoutY="204.0" prefHeight="259.0" prefWidth="714.0">
+       <TableView fx:id="productTableView" layoutX="21.0" layoutY="90.0" prefHeight="259.0" prefWidth="714.0">
            <columns>
-               <TableColumn text="Stock" prefWidth="89.0">
+               <TableColumn prefWidth="75.0" text="Stock">
                    <cellValueFactory>
-                       <PropertyValueFactory property="stock"/>
+                       <PropertyValueFactory property="stock" />
                    </cellValueFactory>
                </TableColumn>
-               <TableColumn text="Name" prefWidth="311.0">
+               <TableColumn prefWidth="125.0" text="Name">
                    <cellValueFactory>
-                       <PropertyValueFactory property="name"/>
+                       <PropertyValueFactory property="name" />
                    </cellValueFactory>
                </TableColumn>
-               <TableColumn text="Category" prefWidth="212.0">
+               <TableColumn prefWidth="125.0" text="Category">
                    <cellValueFactory>
-                       <PropertyValueFactory property="type"/>
+                       <PropertyValueFactory property="type" />
                    </cellValueFactory>
                </TableColumn>
-               <TableColumn text="Price (€)" prefWidth="85.0">
+               <TableColumn prefWidth="75.0" text="Price (€)">
                    <cellValueFactory>
-                       <PropertyValueFactory property="price"/>
+                       <PropertyValueFactory property="price" />
                    </cellValueFactory>
                </TableColumn>
-               <TableColumn text="Description" prefWidth="89.0">
+               <TableColumn prefWidth="275.0" text="Description">
                    <cellValueFactory>
-                       <PropertyValueFactory property="description"/>
+                       <PropertyValueFactory property="description" />
                    </cellValueFactory>
                </TableColumn>
            </columns>
        </TableView>
+      <Label layoutX="24.0" layoutY="375.0" text="Quantity">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="quantityTextField" layoutX="109.0" layoutY="370.0" prefHeight="25.0" prefWidth="93.0" promptText="e.g. 5">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addToOrderButton" layoutX="24.0" layoutY="423.0" mnemonicParsing="false" onAction="#onAddOrderButtonClick" text="Add to order">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="144.0" layoutY="423.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

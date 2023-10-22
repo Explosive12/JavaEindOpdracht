@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import nl.com.wimmusic.database.Database;
+import nl.com.wimmusic.models.Customer;
 import nl.com.wimmusic.models.Instrument;
 import nl.com.wimmusic.models.User;
 
@@ -41,7 +42,15 @@ public class CreateOrderController extends BaseController implements Initializab
       return;
     }
     errorTextBoxLabel.setVisible(false);
-    loadDialog("add-product-view.fxml", new AddProductController(user, database), "Wim's Music Dungeon - Add Product");
+
+    Customer customer =
+        new Customer(
+            firstNameField.getText(),
+            lastNameField.getText(),
+            emailLabelField.getText(),
+            phoneNumberField.getText());
+
+    loadDialog("add-product-view.fxml", new AddProductController(user, database, customer), "Wim's Music Dungeon - Add Product");
   }
 
   @FXML

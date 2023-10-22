@@ -78,4 +78,7 @@ public class Database implements Serializable {
   public List<Instrument> getInstruments() {
     return instruments;
   }
+
+  public void addProductToOrder(Customer customer, Instrument instrument, int quantity) {
+  }
 }
