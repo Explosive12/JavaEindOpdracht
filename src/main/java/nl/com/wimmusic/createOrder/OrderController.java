@@ -1,6 +1,7 @@
 package nl.com.wimmusic.createOrder;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -41,7 +42,9 @@ public class OrderController extends BaseController implements Initializable {
         "add-product-view.fxml",
         new ProductController(user, database, order),
         "Wim's Music Dungeon - Add Product");
+    productTableView.refresh();
   }
+
 
   private boolean filledIn() {
     return !firstNameField.getText().isEmpty()
@@ -84,8 +87,9 @@ private Customer createCustomer() {
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {
     errorTextBoxLabel.setVisible(false);
+    List<OrderItem> orderItems = order.getOrderItems();
     ObservableList<OrderItem> productList =
-        FXCollections.observableList(order.getOrderItems());
+        FXCollections.observableList(orderItems);
     productTableView.setItems(productList);
   }
 }

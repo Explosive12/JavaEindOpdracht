@@ -43,6 +43,7 @@ public class ProductController extends BaseController implements Initializable {
 
     OrderService orderService = new OrderService(order);
     orderService.addProductToOrder(product, quantity);
+
     Stage stage = (Stage) addToOrderButton.getScene().getWindow();
     stage.close();
   }

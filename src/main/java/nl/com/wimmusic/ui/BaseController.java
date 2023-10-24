@@ -34,7 +34,7 @@ public class BaseController {
             stage.setTitle(title);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(scene);
-            stage.show();
+            stage.showAndWait();
         } catch (CantFindFXMLException | IOException  e) {
             throw new RuntimeException(e);
         }
