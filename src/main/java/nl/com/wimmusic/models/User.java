@@ -8,7 +8,7 @@ public class User implements Serializable {
   private final String userName;
   private final String password;
   private final String name;
-  protected UserRoles userRole;
+  private UserRoles userRole;
 
   public User(int id, String userName, String password, String name) {
     this.id = id;
@@ -27,5 +27,9 @@ public class User implements Serializable {
 
   public UserRoles getUserRole() {
     return userRole;
+  }
+
+  public void setUserRole(UserRoles userRole) {
+    this.userRole = userRole;
   }
 }

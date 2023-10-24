@@ -1,4 +1,4 @@
-package nl.com.wimmusic.ui;
+package nl.com.wimmusic.login;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,8 +16,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import nl.com.wimmusic.Exception.CantFindFXMLException;
 import nl.com.wimmusic.WimMusicApplication;
 import nl.com.wimmusic.database.Database;
+import nl.com.wimmusic.menu.MenuController;
 import nl.com.wimmusic.models.User;
 
 public class LoginController implements Initializable {
@@ -74,7 +76,7 @@ public class LoginController implements Initializable {
       stage.setTitle("Wim's music dungeon - Dashboard");
       stage.showAndWait();
     } catch (IOException e) {
-      throw new RuntimeException("Error loading FXML file", e);
+      throw new CantFindFXMLException("Cannot find the FXML file", e);
     } catch (Exception e) {
       System.err.println("Error loading FXML: " + e.getMessage());
       e.printStackTrace();

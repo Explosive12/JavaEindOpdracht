@@ -7,7 +7,6 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="479.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
       <Label layoutX="29.0" layoutY="30.0" text="Select product">
          <font>
             <Font size="25.0" />
@@ -52,7 +51,7 @@
             <Font size="15.0" />
          </font>
       </TextField>
-      <Button fx:id="addToOrderButton" layoutX="24.0" layoutY="423.0" mnemonicParsing="false" onAction="#onAddOrderButtonClick" text="Add to order">
+      <Button fx:id="addToOrderButton" layoutX="24.0" layoutY="423.0" mnemonicParsing="false" onAction="#onAddToOrderButtonClick" text="Add to order">
          <font>
             <Font size="15.0" />
          </font>
@@ -62,7 +61,10 @@
             <Font size="15.0" />
          </font>
       </Button>
-   </children>
+      <Label fx:id="errorLabel" layoutX="267.0" layoutY="377.0" text="Please fill in a valid number" textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>

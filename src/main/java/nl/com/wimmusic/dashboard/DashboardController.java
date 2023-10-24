@@ -1,4 +1,4 @@
-package nl.com.wimmusic.ui;
+package nl.com.wimmusic.dashboard;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import nl.com.wimmusic.database.Database;
 import nl.com.wimmusic.models.User;
+import nl.com.wimmusic.ui.BaseController;
 
 public class DashboardController extends BaseController implements Initializable {
 
@@ -19,7 +20,7 @@ public class DashboardController extends BaseController implements Initializable
 
   @FXML Label dateTimeLabel;
 
-  DashboardController(User user, Database database) {
+  public DashboardController(User user, Database database) {
     super(user, database);
   }
 

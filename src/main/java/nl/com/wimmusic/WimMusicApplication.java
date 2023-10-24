@@ -5,7 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import nl.com.wimmusic.ui.LoginController;
+import nl.com.wimmusic.login.LoginController;
 
 public class WimMusicApplication extends Application {
 

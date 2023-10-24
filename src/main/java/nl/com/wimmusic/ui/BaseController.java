@@ -25,7 +25,7 @@ public class BaseController {
         this.database = database;
     }
 
-    public void loadDialog(String name, Object controller, String title) {
+    public void loadDialog(String name, BaseController controller, String title) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(WimMusicApplication.class.getResource(name));
             fxmlLoader.setController(controller);
@@ -40,7 +40,8 @@ public class BaseController {
         }
     }
 
-    public void loadScene(String name, Object controller) {
+
+    public void loadScene(String name, BaseController controller) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(WimMusicApplication.class.getResource(name));
             fxmlLoader.setController(controller);

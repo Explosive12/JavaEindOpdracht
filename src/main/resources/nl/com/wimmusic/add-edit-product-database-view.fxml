@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="479.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="addOrEditLabel" layoutX="48.0" layoutY="37.0" text="Add Product">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <GridPane layoutX="48.0" layoutY="100.0" prefHeight="152.0" prefWidth="692.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="167.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="122.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="209.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+            <Label text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" />
+            <Label text="Description" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Stock" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="stockTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Price" GridPane.columnIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Type" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="priceTextField" GridPane.columnIndex="3" />
+            <ComboBox fx:id="typeComboBox" prefHeight="25.0" prefWidth="241.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      </GridPane>
+      <Label fx:id="errorLabel" layoutX="79.0" layoutY="75.0" prefHeight="21.0" prefWidth="273.0" text="Please make sure everything is filled in" textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="addProductButton" layoutX="48.0" layoutY="339.0" mnemonicParsing="false" onAction="#onAddEditProductButton" text="Add product">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="cancelButton" layoutX="190.0" layoutY="339.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

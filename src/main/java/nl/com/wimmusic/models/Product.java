@@ -2,33 +2,28 @@ package nl.com.wimmusic.models;
 
 import java.io.Serializable;
 
-public class Instrument implements Serializable {
+public class Product implements Serializable {
   private static final long serialVersionUID = -8584661383888853176L;
 
-  public Instrument(
-      int id,
+  public Product(
       int stock,
       String name,
       String description,
       double price,
-      InstrumentType type,
-      Boolean isBorrowed) {
-    this.id = id;
+      ProductType type
+      ) {
     this.stock = stock;
     this.name = name;
     this.description = description;
     this.price = price;
     this.type = type;
-    this.isBorrowed = isBorrowed;
   }
   private int id;
   private int stock;
-  private int quantity;
   private String name;
   private String description;
   private double price;
-  private InstrumentType type;
-  private Boolean isBorrowed;
+  private ProductType type;
 
   public int getStock() {
     return stock;
@@ -66,14 +61,6 @@ public class Instrument implements Serializable {
     this.id = id;
   }
 
-  public int getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(int quantity) {
-    this.quantity = quantity;
-  }
-
   public String getName() {
     return name;
   }
@@ -82,19 +69,13 @@ public class Instrument implements Serializable {
     this.name = name;
   }
 
-  public InstrumentType getType() {
+  public ProductType getType() {
     return type;
   }
 
-  public void setType(InstrumentType type) {
+  public void setType(ProductType type) {
     this.type = type;
   }
 
-  public Boolean getBorrowed() {
-    return isBorrowed;
-  }
 
-  public void setBorrowed(Boolean borrowed) {
-    isBorrowed = borrowed;
-  }
 }
