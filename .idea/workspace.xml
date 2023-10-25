@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaFXApplication" />
+        <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Explosive12&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="dbf35dde-8627-4e45-9af4-14356b1e097f" />
+        <option name="url" value="https://github.com/Explosive12/JavaEindOpdracht" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+    &quot;associatedIndex&quot;: 7
+    }</component>
+  <component name="ProjectId" id="2WPVW1Przn1QRLb8TJF4u8ohN0V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "20",
+    "last_opened_file_path": "C:/Users/Julian/source/repos/Informatica/Jaar 2/WimMusic2",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="nl.com.wimmusic.models" />
+      <recent name="nl.com.wimmusic.ui" />
+      <recent name="nl.com.wimmusic.Database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\source\repos\Informatica\Jaar 2\WimMusic\.idea" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\source\repos\Informatica\Jaar 2\WimMusic\.idea" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="nl.com.wimmusic" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="nl.com.wimmusic.WimMusicApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="" />
+      <created>1696634233735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696634233735</updated>
+      <workItem from="1696634234774" duration="19145000" />
+      <workItem from="1696850085222" duration="3873000" />
+      <workItem from="1696854066323" duration="788000" />
+      <workItem from="1696858880288" duration="153000" />
+      <workItem from="1696859042908" duration="209000" />
+      <workItem from="1696859260208" duration="545000" />
+      <workItem from="1696859816890" duration="7729000" />
+      <workItem from="1697020071495" duration="12366000" />
+      <workItem from="1697207091729" duration="3447000" />
+      <workItem from="1697292188185" duration="4200000" />
+      <workItem from="1697544657950" duration="1017000" />
+      <workItem from="1697545762460" duration="2924000" />
+      <workItem from="1697648173919" duration="2406000" />
+      <workItem from="1697714308671" duration="10284000" />
+      <workItem from="1697794724935" duration="6350000" />
+      <workItem from="1697983245802" duration="4121000" />
+      <workItem from="1698003041080" duration="4176000" />
+      <workItem from="1698045961039" duration="6112000" />
+      <workItem from="1698056847561" duration="11877000" />
+      <workItem from="1698089618996" duration="307000" />
+      <workItem from="1698089941444" duration="11168000" />
+      <workItem from="1698134152751" duration="14203000" />
+      <workItem from="1698153569954" duration="3356000" />
+      <workItem from="1698157884928" duration="14315000" />
+      <workItem from="1698178790911" duration="1218000" />
+      <workItem from="1698180316331" duration="17000" />
+      <workItem from="1698180361098" duration="2942000" />
+      <workItem from="1698220885700" duration="5245000" />
+    </task>
+    <task id="LOCAL-00001" summary="Basic :)">
+      <option name="closed" value="true" />
+      <created>1696634397066</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696634397066</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Login screen">
+      <option name="closed" value="true" />
+      <created>1696639190661</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696639190661</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Login screen">
+      <option name="closed" value="true" />
+      <created>1696679730567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696679730567</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added more login stuff mhm">
+      <option name="closed" value="true" />
+      <created>1696680637204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696680637204</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added more login stuff mhm">
+      <option name="closed" value="true" />
+      <created>1696698084450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696698084450</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Login Button fixed">
+      <option name="closed" value="true" />
+      <created>1696866561199</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696866561199</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Login DONE">
+      <option name="closed" value="true" />
+      <created>1697027014630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697027014630</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Login smoll fixes">
+      <option name="closed" value="true" />
+      <created>1697028831600</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697028831600</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added the dashboard">
+      <option name="closed" value="true" />
+      <created>1697054991506</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697054991506</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added the dashboard">
+      <option name="closed" value="true" />
+      <created>1697207704832</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697207704832</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added the dashboard">
+      <option name="closed" value="true" />
+      <created>1697207813208</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697207813208</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Navigating to main view is possible now">
+      <option name="closed" value="true" />
+      <created>1697548592347</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697548592347</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Navigating to main view is possible now">
+      <option name="closed" value="true" />
+      <created>1697548679040</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697548679040</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Creating Order Start (do TableBox and the buttons!)">
+      <option name="closed" value="true" />
+      <created>1697749309037</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697749309037</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Creating Order almost done :)">
+      <option name="closed" value="true" />
+      <created>1698010831801</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698010831801</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Creating Order almost done :) pt2. (just fix listview)">
+      <option name="closed" value="true" />
+      <created>1698180507451</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698180507451</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)">
+      <option name="closed" value="true" />
+      <created>1698181549524</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1698181549524</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic :)" />
+    <MESSAGE value="Login screen" />
+    <MESSAGE value="Added more login stuff mhm" />
+    <MESSAGE value="Login Button fixed" />
+    <MESSAGE value="Login DONE" />
+    <MESSAGE value="Login smoll fixes" />
+    <MESSAGE value="Added the dashboard" />
+    <MESSAGE value="Navigating to main view is possible now" />
+    <MESSAGE value="Creating Order Start (do TableBox and the buttons!)" />
+    <MESSAGE value="Creating Order almost done :)" />
+    <MESSAGE value="Creating Order almost done :) pt2. (just fix listview)" />
+    <MESSAGE value="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
