@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import nl.com.wimmusic.Exception.CantFindFXMLException;
 import nl.com.wimmusic.WimMusicApplication;
 import nl.com.wimmusic.database.Database;
+import nl.com.wimmusic.models.Product;
 import nl.com.wimmusic.models.User;
 
 import java.io.IOException;
@@ -34,9 +35,11 @@ public class BaseController {
             stage.setTitle(title);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(scene);
+
             stage.showAndWait();
+
         } catch (CantFindFXMLException | IOException  e) {
-            throw new RuntimeException(e);
+            throw new CantFindFXMLException("Couldn't load dialog", e);
         }
     }
 
@@ -50,7 +53,7 @@ public class BaseController {
                 layout.getChildren().remove(1);
             layout.getChildren().add(scene.getRoot());
         } catch (CantFindFXMLException | IOException  e) {
-            throw new RuntimeException(e);
+      throw new CantFindFXMLException("Couldn't load scene", e);
         }
     }
 }

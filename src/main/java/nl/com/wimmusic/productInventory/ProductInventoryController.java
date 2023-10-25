@@ -41,6 +41,7 @@ public class ProductInventoryController extends BaseController implements Initia
         "add-edit-product-database-view.fxml",
         new ProductToDatabaseController(user, database, product),
         "Wim's Music Dungeon - Edit Product");
+        productTableView.refresh();
     }
 
     @FXML

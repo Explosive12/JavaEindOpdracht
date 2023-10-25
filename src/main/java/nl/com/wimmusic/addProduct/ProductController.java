@@ -6,11 +6,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+import nl.com.wimmusic.createOrder.OrderController;
 import nl.com.wimmusic.createOrder.OrderService;
 import nl.com.wimmusic.database.Database;
 import nl.com.wimmusic.models.Product;
@@ -20,7 +18,9 @@ import nl.com.wimmusic.ui.BaseController;
 
 public class ProductController extends BaseController implements Initializable {
 
+
   private final Order order;
+  private OrderController orderController;
   @FXML private TableView<Product> productTableView;
   @FXML private Button cancelButton;
   @FXML private Button addToOrderButton;
@@ -31,6 +31,7 @@ public class ProductController extends BaseController implements Initializable {
     super(user, database);
     this.order = order;
   }
+
 
   @FXML
   public void onAddToOrderButtonClick() {
@@ -48,16 +49,23 @@ public class ProductController extends BaseController implements Initializable {
     stage.close();
   }
   private int getQuantity() {
-    if (quantityTextField.getText().isEmpty()) {
-      return 0;
+    int quantity = 0;
+    String quantityString = quantityTextField.getText();
+
+    if (!quantityString.isBlank()) {
+      try {
+        quantity = Integer.parseInt(quantityString);
+        Product selectedProduct = productTableView.getSelectionModel().getSelectedItem();
+
+        if (quantity < 1 || quantity > selectedProduct.getStock()) {
+          errorLabel.setVisible(true);
+          return 0;
+        }
+      } catch (NumberFormatException e) {
+        errorLabel.setVisible(true);
+      }
     }
-    try {
-      Integer.parseInt(quantityTextField.getText());
-        return Integer.parseInt(quantityTextField.getText());
-    } catch (NumberFormatException e) {
-      errorLabel.setVisible(true);
-    }
-      return 0;
+  return quantity;
   }
 
   public void onCancelButtonClick() {
@@ -71,4 +79,6 @@ public class ProductController extends BaseController implements Initializable {
         FXCollections.observableList(database.getProducts());
     productTableView.setItems(instrumentsList);
   }
+
+
 }

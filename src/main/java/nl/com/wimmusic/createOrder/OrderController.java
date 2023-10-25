@@ -18,13 +18,15 @@ import nl.com.wimmusic.ui.BaseController;
 
 public class OrderController extends BaseController implements Initializable {
 
+
+
+  private Product selectedProduct;
   @FXML private TextField firstNameField;
   @FXML private TextField lastNameField;
   @FXML private TextField emailLabelField;
   @FXML private TextField phoneNumberField;
   @FXML private Label errorTextBoxLabel;
   @FXML private TableView<OrderItem> productTableView;
-
   private Customer customer;
   private final Order order;
 
@@ -38,19 +40,20 @@ public class OrderController extends BaseController implements Initializable {
   @FXML
   protected void onAddProductButtonClick(ActionEvent event) {
 
-    loadDialog(
+    ProductController productController = new ProductController(user, database, order);
+loadDialog(
         "add-product-view.fxml",
-        new ProductController(user, database, order),
+        productController,
         "Wim's Music Dungeon - Add Product");
     productTableView.refresh();
   }
 
 
   private boolean filledIn() {
-    return !firstNameField.getText().isEmpty()
-        && !lastNameField.getText().isEmpty()
-        && !emailLabelField.getText().isEmpty()
-        && !phoneNumberField.getText().isEmpty();
+    return !firstNameField.getText().isBlank()
+        && !lastNameField.getText().isBlank()
+        && !emailLabelField.getText().isBlank()
+        && !phoneNumberField.getText().isBlank();
   }
 
   @FXML

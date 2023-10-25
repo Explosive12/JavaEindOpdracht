@@ -43,6 +43,7 @@ public class ProductToDatabaseController extends BaseController implements Initi
 
   }
   public void onAddEditProductButton(ActionEvent event) {
+try{
     if (!isFilledIn()) {
       errorLabel.setVisible(true);
       return;
@@ -55,14 +56,17 @@ public class ProductToDatabaseController extends BaseController implements Initi
     }
     Stage stage = (Stage) addOrEditLabel.getScene().getWindow();
     stage.close();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
   }
 
   private boolean isFilledIn() {
-    return !nameTextField.getText().isEmpty()
-        && !descriptionTextField.getText().isEmpty()
+    return !nameTextField.getText().isBlank()
+        && !descriptionTextField.getText().isBlank()
         && !priceTextField.getText().isEmpty()
         && !typeComboBox.getSelectionModel().isEmpty()
-        && !stockTextField.getText().isEmpty();
+        && !stockTextField.getText().isBlank();
   }
 
   // Create part

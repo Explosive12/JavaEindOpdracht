@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/DialogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addEditProductController/ProductToDatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addEditProductController/ProductToDatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addProduct/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addProduct/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/createOrder/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/createOrder/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/productInventory/ProductInventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/productInventory/ProductInventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/order-history-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/order-history-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +153,7 @@
       <workItem from="1698178790911" duration="1218000" />
       <workItem from="1698180316331" duration="17000" />
       <workItem from="1698180361098" duration="2942000" />
-      <workItem from="1698220885700" duration="5245000" />
+      <workItem from="1698220885700" duration="14023000" />
     </task>
     <task id="LOCAL-00001" summary="Basic :)">
       <option name="closed" value="true" />
@@ -282,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698181549524</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)">
+      <option name="closed" value="true" />
+      <created>1698226369007</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1698226369007</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
