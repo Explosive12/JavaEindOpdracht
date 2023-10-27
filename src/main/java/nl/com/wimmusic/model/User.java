@@ -1,4 +1,4 @@
-package nl.com.wimmusic.models;
+package nl.com.wimmusic.model;
 
 import java.io.Serializable;
 
@@ -17,13 +17,18 @@ public class User implements Serializable {
     this.name = name;
     this.userRole = UserRoles.None;
   }
+
   public String getUserName() {
     return userName;
   }
 
-  public String getPassword() {return password;}
+  public String getPassword() {
+    return password;
+  }
 
-  public String getName() {return name;}
+  public String getName() {
+    return name;
+  }
 
   public UserRoles getUserRole() {
     return userRole;

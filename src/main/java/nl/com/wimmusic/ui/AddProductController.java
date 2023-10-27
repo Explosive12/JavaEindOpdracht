@@ -1,5 +1,7 @@
-package nl.com.wimmusic.addEditProductController;
+package nl.com.wimmusic.ui;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,17 +13,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import nl.com.wimmusic.database.Database;
-import nl.com.wimmusic.models.Product;
-import nl.com.wimmusic.models.ProductType;
-import nl.com.wimmusic.models.User;
-import nl.com.wimmusic.productInventory.ProductInventoryController;
-import nl.com.wimmusic.ui.BaseController;
+import nl.com.wimmusic.model.Product;
+import nl.com.wimmusic.model.ProductType;
+import nl.com.wimmusic.model.User;
+import nl.com.wimmusic.service.ProductService;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class ProductToDatabaseController extends BaseController implements Initializable {
-  private final Product product;
+public class AddProductController extends BaseController implements Initializable {
+  private Product product;
+  private final ProductInventoryController productInventoryController;
   @FXML private Label addOrEditLabel;
   @FXML private Button addProductButton;
   @FXML private TextField nameTextField;
@@ -31,33 +30,69 @@ public class ProductToDatabaseController extends BaseController implements Initi
   @FXML private TextField stockTextField;
   @FXML private Label errorLabel;
 
-  public ProductToDatabaseController(User user, Database database, Product product) {
+  public AddProductController(User user, Database database, Product product, ProductInventoryController productInventoryController) {
     super(user, database);
     this.product = product;
+    this.productInventoryController = productInventoryController;
   }
 
+  @Override
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    ObservableList<ProductType> productTypes =
+            FXCollections.observableArrayList(ProductType.values());
+    typeComboBox.setItems(productTypes);
+    if (product != null) {
+      changeToEditScene();
+    }
+  }
+
+  public void onTextChange(){
+    nameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+      if (!newValue.matches("\\sa-zA-Z*")) {
+        nameTextField.setText(newValue.replaceAll("[^\\sa-zA-Z]", ""));
+      }
+    });
+  descriptionTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+      if (!newValue.matches("\\sa-zA-Z*")) {
+        descriptionTextField.setText(newValue.replaceAll("[^\\sa-zA-Z]", ""));
+      }
+    });
+    priceTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+      if (!newValue.matches("\\d*\\.?\\d*")) {
+        priceTextField.setText(newValue.replaceAll("[^\\d.]", ""));
+      }
+    });
+    stockTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+      if (!newValue.matches("\\d*")) {
+        stockTextField.setText(newValue.replaceAll("[^\\d]", ""));
+      }
+    });
+    }
   // Buttons
-  @FXML public void onCancelButtonClick(ActionEvent event) {
+  @FXML
+  protected void onCancelButtonClick(ActionEvent event) {
     Stage stage = (Stage) addOrEditLabel.getScene().getWindow();
     stage.close();
-
   }
-  public void onAddEditProductButton(ActionEvent event) {
-try{
-    if (!isFilledIn()) {
-      errorLabel.setVisible(true);
-      return;
-    }
-    errorLabel.setVisible(false);
-    if (product == null) {
-      createProduct();
-    } else {
+
+  @FXML
+  protected void onAddEditProductButton(ActionEvent event) {
+    try {
+      if (!isFilledIn()) {
+        errorLabel.setVisible(true);
+        return;
+      }
+      errorLabel.setVisible(false);
+      if (product == null) {
+        createProduct();
+      } else {
         editProduct();
-    }
-    Stage stage = (Stage) addOrEditLabel.getScene().getWindow();
-    stage.close();
+      }
+        productInventoryController.updateProductList(product);
+      Stage stage = (Stage) addOrEditLabel.getScene().getWindow();
+      stage.close();
     } catch (Exception e) {
-        e.printStackTrace();
+      e.printStackTrace();
     }
   }
 
@@ -71,16 +106,15 @@ try{
 
   // Create part
   private void createProduct() {
-    Product newProduct =
+    product =
         new Product(
             Integer.parseInt(stockTextField.getText()),
             nameTextField.getText(),
             descriptionTextField.getText(),
             Double.parseDouble(priceTextField.getText()),
             typeComboBox.getSelectionModel().getSelectedItem());
-    ProductService productService = new ProductService(newProduct);
-    productService.addProductToDatabase(database);
   }
+
   // Edit part
   private void editProduct() {
     product.setStock(Integer.parseInt(stockTextField.getText()));
@@ -90,8 +124,6 @@ try{
     product.setType(typeComboBox.getSelectionModel().getSelectedItem());
   }
 
-  // Initialise part
-
   private void changeToEditScene() {
     addOrEditLabel.setText("Edit Product");
     addProductButton.setText("Edit Product");
@@ -100,13 +132,5 @@ try{
     priceTextField.setText(String.valueOf(product.getPrice()));
     typeComboBox.getSelectionModel().select(product.getType());
     stockTextField.setText(String.valueOf(product.getStock()));
-  }
-  @Override
-  public void initialize(URL url, ResourceBundle resourceBundle) {
-    ObservableList<ProductType> productTypes = FXCollections.observableArrayList(ProductType.values());
-    typeComboBox.setItems(productTypes);
-    if (product != null) {
-      changeToEditScene();
-    }
   }
 }

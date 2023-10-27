@@ -27,7 +27,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="nameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="nameTextField" onTextChange="#onTextChange" GridPane.columnIndex="1" />
             <Label text="Description" GridPane.rowIndex="1">
                <font>
                   <Font size="15.0" />
@@ -38,14 +38,14 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="stockTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="descriptionTextField" onTextChange="#onTextChange" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="stockTextField" onTextChange="#onTextChange" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Price" GridPane.columnIndex="2">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label text="Type" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="Type" onTextChange="#onTextChange"  GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="15.0" />
                </font>

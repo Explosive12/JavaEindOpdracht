@@ -1,29 +1,23 @@
-package nl.com.wimmusic.models;
+package nl.com.wimmusic.model;
 
 import java.io.Serializable;
 
 public class Product implements Serializable {
   private static final long serialVersionUID = -8584661383888853176L;
-
-  public Product(
-      int stock,
-      String name,
-      String description,
-      double price,
-      ProductType type
-      ) {
-    this.stock = stock;
-    this.name = name;
-    this.description = description;
-    this.price = price;
-    this.type = type;
-  }
   private int id;
   private int stock;
   private String name;
   private String description;
   private double price;
   private ProductType type;
+
+  public Product(int stock, String name, String description, double price, ProductType type) {
+    this.stock = stock;
+    this.name = name;
+    this.description = description;
+    this.price = price;
+    this.type = type;
+  }
 
   public int getStock() {
     return stock;
@@ -41,12 +35,12 @@ public class Product implements Serializable {
     this.description = description;
   }
 
-  public void setPrice(double price) {
-    this.price = price;
-  }
-
   public double getPrice() {
     return price;
+  }
+
+  public void setPrice(double price) {
+    this.price = price;
   }
 
   public void setPrice(int price) {
@@ -76,5 +70,4 @@ public class Product implements Serializable {
   public void setType(ProductType type) {
     this.type = type;
   }
-
 }

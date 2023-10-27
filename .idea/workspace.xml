@@ -4,16 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/DialogController.java" afterDir="false" />
+    <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Order History remaining, thats it &lt;3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/ConfirmOrderDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/confirm-order-dialog-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addEditProductController/ProductToDatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addEditProductController/ProductToDatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addProduct/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addProduct/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/createOrder/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/createOrder/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/productInventory/ProductInventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/productInventory/ProductInventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/Exception/CantFindDatabaseFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/exception/CantFindDatabaseFileException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/Exception/CantFindFXMLException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/exception/CantFindFXMLException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/WimMusicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/WimMusicApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addEditProductController/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addEditProductController/ProductToDatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/AddProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/addProduct/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/AddProductToOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/createOrder/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/createOrder/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/dashboard/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/ProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/models/UserRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/UserRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/orderHistory/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/OrderHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/productInventory/ProductInventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/ProductInventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/DialogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/add-edit-product-database-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/add-edit-product-database-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/add-product-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/add-product-to-order-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/menu-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/order-history-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/order-history-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,30 +95,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "C:/Users/Julian/source/repos/Informatica/Jaar 2/WimMusic2",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Julian/source/repos/Informatica/Jaar 2/WimMusic2&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="nl.com.wimmusic.models" />
@@ -104,6 +129,7 @@
       <recent name="C:\Users\Julian\source\repos\Informatica\Jaar 2\WimMusic\.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\source\repos\Informatica\Jaar 2\WimMusic2" />
       <recent name="C:\Users\Julian\source\repos\Informatica\Jaar 2\WimMusic\.idea" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -113,6 +139,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="nl.com.wimmusic.WimMusicApplication" />
+      <module name="WimMusic" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,7 +180,8 @@
       <workItem from="1698178790911" duration="1218000" />
       <workItem from="1698180316331" duration="17000" />
       <workItem from="1698180361098" duration="2942000" />
-      <workItem from="1698220885700" duration="14023000" />
+      <workItem from="1698220885700" duration="17988000" />
+      <workItem from="1698396454704" duration="13123000" />
     </task>
     <task id="LOCAL-00001" summary="Basic :)">
       <option name="closed" value="true" />
@@ -299,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698226369007</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Order History remaining, thats it &lt;3">
+      <option name="closed" value="true" />
+      <created>1698239288384</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1698239288384</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +365,8 @@
     <MESSAGE value="Creating Order almost done :)" />
     <MESSAGE value="Creating Order almost done :) pt2. (just fix listview)" />
     <MESSAGE value="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)" />
+    <MESSAGE value="Order History remaining, thats it &lt;3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order History remaining, thats it &lt;3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

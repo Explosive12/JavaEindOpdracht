@@ -1,4 +1,4 @@
-package nl.com.wimmusic.createOrder;
+package nl.com.wimmusic.ui;
 
 import java.net.URL;
 import java.util.List;
@@ -11,16 +11,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import nl.com.wimmusic.addProduct.ProductController;
 import nl.com.wimmusic.database.Database;
-import nl.com.wimmusic.models.*;
-import nl.com.wimmusic.ui.BaseController;
+import nl.com.wimmusic.model.*;
+import nl.com.wimmusic.service.OrderService;
 
 public class OrderController extends BaseController implements Initializable {
 
-
-
-  private Product selectedProduct;
+  private final Order order;
+  private ObservableList<OrderItem> orderItems;
   @FXML private TextField firstNameField;
   @FXML private TextField lastNameField;
   @FXML private TextField emailLabelField;
@@ -28,32 +26,32 @@ public class OrderController extends BaseController implements Initializable {
   @FXML private Label errorTextBoxLabel;
   @FXML private TableView<OrderItem> productTableView;
   private Customer customer;
-  private final Order order;
 
   public OrderController(User user, Database database) {
     super(user, database);
     order = new Order(customer);
     OrderService orderService = new OrderService(order);
-    orderService.addProductToOrder(new Product(15,"Guitar","test",100,ProductType.Guitars ), 1);
+    orderService.addProductToOrder(new Product(15, "Guitar", "test", 100, ProductType.Guitars), 1);
+  }
+
+  @Override
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    errorTextBoxLabel.setVisible(false);
+
+    orderItems = FXCollections.observableArrayList(order.getOrderItems());
+    productTableView.setItems(orderItems);
+  }
+
+  protected void addProductToOrder(Product product, int quantity) {
+    orderItems.add(new OrderItem(product, quantity));
   }
 
   @FXML
   protected void onAddProductButtonClick(ActionEvent event) {
 
-    ProductController productController = new ProductController(user, database, order);
-loadDialog(
-        "add-product-view.fxml",
-        productController,
-        "Wim's Music Dungeon - Add Product");
+    AddProductToOrderController productController = new AddProductToOrderController(user, database, this);
+    loadDialog("add-product-to-order-view.fxml", productController, "Wim's Music Dungeon - Add Product");
     productTableView.refresh();
-  }
-
-
-  private boolean filledIn() {
-    return !firstNameField.getText().isBlank()
-        && !lastNameField.getText().isBlank()
-        && !emailLabelField.getText().isBlank()
-        && !phoneNumberField.getText().isBlank();
   }
 
   @FXML
@@ -65,13 +63,7 @@ loadDialog(
     OrderService orderService = new OrderService(order);
     orderService.removeProductFromOrder(order.getOrderItems(), orderItem);
   }
-private Customer createCustomer() {
-    return new Customer(
-                    firstNameField.getText(),
-                    lastNameField.getText(),
-                    emailLabelField.getText(),
-                    phoneNumberField.getText());
-  }
+
   @FXML
   protected void onCreateOrderButtonClick(ActionEvent event) {
     if (!filledIn()) {
@@ -82,17 +74,28 @@ private Customer createCustomer() {
 
     order.setCustomer(createCustomer());
 
-    database.addOrder(order);
+    loadDialog(
+        "order-confirmation-view.fxml",
+        new ConfirmOrderDialogController(user, database, order),
+        "Wim's Music Dungeon - Order Confirmation");
     System.out.println("Order created");
     loadScene("create-order-view.fxml", new OrderController(user, database));
   }
 
-  @Override
-  public void initialize(URL url, ResourceBundle resourceBundle) {
-    errorTextBoxLabel.setVisible(false);
-    List<OrderItem> orderItems = order.getOrderItems();
-    ObservableList<OrderItem> productList =
-        FXCollections.observableList(orderItems);
-    productTableView.setItems(productList);
+  private boolean filledIn() {
+    return !firstNameField.getText().isBlank()
+        && !lastNameField.getText().isBlank()
+        && !emailLabelField.getText().isBlank()
+        && !phoneNumberField.getText().isBlank();
   }
+
+  private Customer createCustomer() {
+    return new Customer(
+        firstNameField.getText(),
+        lastNameField.getText(),
+        emailLabelField.getText(),
+        phoneNumberField.getText());
+  }
+
+
 }

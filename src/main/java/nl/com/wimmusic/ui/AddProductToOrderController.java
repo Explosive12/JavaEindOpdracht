@@ -1,4 +1,4 @@
-package nl.com.wimmusic.addProduct;
+package nl.com.wimmusic.ui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,46 +8,46 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import nl.com.wimmusic.createOrder.OrderController;
-import nl.com.wimmusic.createOrder.OrderService;
 import nl.com.wimmusic.database.Database;
-import nl.com.wimmusic.models.Product;
-import nl.com.wimmusic.models.Order;
-import nl.com.wimmusic.models.User;
-import nl.com.wimmusic.ui.BaseController;
+import nl.com.wimmusic.model.Order;
+import nl.com.wimmusic.model.Product;
+import nl.com.wimmusic.model.User;
+import nl.com.wimmusic.service.OrderService;
 
-public class ProductController extends BaseController implements Initializable {
+public class AddProductToOrderController extends BaseController implements Initializable {
 
-
-  private final Order order;
-  private OrderController orderController;
+  private final OrderController orderController;
   @FXML private TableView<Product> productTableView;
   @FXML private Button cancelButton;
   @FXML private Button addToOrderButton;
   @FXML private TextField quantityTextField;
   @FXML private Label errorLabel;
 
-  public ProductController(User user, Database database, Order order) {
+  public AddProductToOrderController(User user, Database database, OrderController orderController ) {
     super(user, database);
-    this.order = order;
+    this.orderController = orderController;
   }
 
+  @Override
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    ObservableList<Product> instrumentsList = FXCollections.observableList(database.getProducts());
+    productTableView.setItems(instrumentsList);
+  }
 
   @FXML
-  public void onAddToOrderButtonClick() {
+  protected void onAddToOrderButtonClick() {
     int quantity = getQuantity();
     Product product = productTableView.getSelectionModel().getSelectedItem();
 
     if (product == null || quantity == 0) {
       return;
     }
-
-    OrderService orderService = new OrderService(order);
-    orderService.addProductToOrder(product, quantity);
+    orderController.addProductToOrder(product, quantity);
 
     Stage stage = (Stage) addToOrderButton.getScene().getWindow();
     stage.close();
   }
+
   private int getQuantity() {
     int quantity = 0;
     String quantityString = quantityTextField.getText();
@@ -65,19 +65,12 @@ public class ProductController extends BaseController implements Initializable {
         errorLabel.setVisible(true);
       }
     }
-  return quantity;
+    return quantity;
   }
 
-  public void onCancelButtonClick() {
+  @FXML protected void onCancelButtonClick() {
     Stage stage = (Stage) cancelButton.getScene().getWindow();
     stage.close();
-  }
-
-  @Override
-  public void initialize(URL url, ResourceBundle resourceBundle) {
-    ObservableList<Product> instrumentsList =
-        FXCollections.observableList(database.getProducts());
-    productTableView.setItems(instrumentsList);
   }
 
 

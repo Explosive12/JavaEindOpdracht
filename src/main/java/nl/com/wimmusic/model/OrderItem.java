@@ -1,4 +1,4 @@
-package nl.com.wimmusic.models;
+package nl.com.wimmusic.model;
 
 public class OrderItem {
   private int quantity;
@@ -11,6 +11,10 @@ public class OrderItem {
 
   public Product getProduct() {
     return product;
+  }
+
+  public double getTotalPrice() {
+    return product.getPrice() * quantity;
   }
 
   public void setProduct(Product product) {

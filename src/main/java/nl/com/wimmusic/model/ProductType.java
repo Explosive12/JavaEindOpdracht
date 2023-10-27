@@ -1,4 +1,4 @@
-package nl.com.wimmusic.models;
+package nl.com.wimmusic.model;
 
 import java.io.Serializable;
 

@@ -1,7 +1,6 @@
-package nl.com.wimmusic.dashboard;
+package nl.com.wimmusic.ui;
 
 import java.net.URL;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
@@ -9,17 +8,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import nl.com.wimmusic.database.Database;
-import nl.com.wimmusic.models.User;
-import nl.com.wimmusic.ui.BaseController;
+import nl.com.wimmusic.model.User;
 
 public class DashboardController extends BaseController implements Initializable {
 
-  @FXML Label welcomeLabel;
-
-  @FXML Label roleLabel;
-
-  @FXML Label dateTimeLabel;
-
+  @FXML private Label welcomeLabel;
+  @FXML private Label roleLabel;
+  @FXML private Label dateTimeLabel;
   public DashboardController(User user, Database database) {
     super(user, database);
   }

@@ -16,7 +16,7 @@
             <Button onAction="#onDashBoardButtonClick" minWidth="150"
                     style="-fx-text-fill: white;-fx-background-color: #cc0000;-fx-padding: 5px;-fx-font-size: 18;"
                     text="Dashboard"/>
-            <Button onAction="#onCreateOrderButtonClick" minWidth="150"
+            <Button fx:id="createOrderMenuButton" onAction="#onCreateOrderButtonClick" minWidth="150"
                     style="-fx-text-fill: white;-fx-background-color: #cc0000;-fx-padding: 5px;-fx-font-size: 18;"
                     text="Create order"/>
             <Button onAction="#onProductInventoryClick" minWidth="150"
