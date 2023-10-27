@@ -7,7 +7,7 @@
     <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Done?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/order-history-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/com/wimmusic/order-history-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <workItem from="1698180316331" duration="17000" />
       <workItem from="1698180361098" duration="2942000" />
       <workItem from="1698220885700" duration="17988000" />
-      <workItem from="1698396454704" duration="15282000" />
+      <workItem from="1698396454704" duration="17180000" />
     </task>
     <task id="LOCAL-00001" summary="Basic :)">
       <option name="closed" value="true" />
@@ -319,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698420094145</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Done?">
+      <option name="closed" value="true" />
+      <created>1698420170913</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698420170913</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
