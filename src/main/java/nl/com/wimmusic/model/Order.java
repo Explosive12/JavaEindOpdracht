@@ -33,7 +33,7 @@ public class Order implements Serializable {
     return totalPrice;
   }
   public ObservableList<OrderItem> getOrderItems() {
-    return orderItems;
+    return (ObservableList<OrderItem>) orderItems;
   }
 
   public void setOrderItems(List<OrderItem> orderItems) {

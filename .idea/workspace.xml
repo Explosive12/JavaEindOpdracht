@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Order History remaining, thats it &lt;3 (made cleaner)">
+    <list default="true" id="1f2864f3-fdb6-44bc-9a63-073880663b89" name="Changes" comment="Done?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/database/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/com/wimmusic/ui/OrderHistoryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,7 @@
       <workItem from="1698180316331" duration="17000" />
       <workItem from="1698180361098" duration="2942000" />
       <workItem from="1698220885700" duration="17988000" />
-      <workItem from="1698396454704" duration="14607000" />
+      <workItem from="1698396454704" duration="15282000" />
     </task>
     <task id="LOCAL-00001" summary="Basic :)">
       <option name="closed" value="true" />
@@ -312,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698413122882</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Done?">
+      <option name="closed" value="true" />
+      <created>1698420094145</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1698420094145</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +351,8 @@
     <MESSAGE value="Made Edit and add product work, (just do handling so illegal stuff cant happen (like quantity cant be more than stock enz)" />
     <MESSAGE value="Order History remaining, thats it &lt;3" />
     <MESSAGE value="Order History remaining, thats it &lt;3 (made cleaner)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order History remaining, thats it &lt;3 (made cleaner)" />
+    <MESSAGE value="Done?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

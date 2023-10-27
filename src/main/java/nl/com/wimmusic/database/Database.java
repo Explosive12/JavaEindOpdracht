@@ -105,7 +105,7 @@ public class Database implements Serializable {
   }
 
   public ObservableList<Order> getOrders() {
-    return orders;
+    return (ObservableList<Order>) orders;
   }
 
   public void addOrder(Order order) {
