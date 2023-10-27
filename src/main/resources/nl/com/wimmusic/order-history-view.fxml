@@ -24,7 +24,7 @@
                         <PropertyValueFactory property="name" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn text="totalPrice">
+                <TableColumn text="totalPrice ($)">
                     <cellValueFactory>
                         <PropertyValueFactory property="totalPrice" />
                     </cellValueFactory>
