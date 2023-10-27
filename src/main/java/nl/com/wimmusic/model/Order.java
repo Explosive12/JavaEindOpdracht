@@ -1,5 +1,7 @@
 package nl.com.wimmusic.model;
 
+import javafx.collections.ObservableList;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -30,7 +32,7 @@ public class Order implements Serializable {
     }
     return totalPrice;
   }
-  public List<OrderItem> getOrderItems() {
+  public ObservableList<OrderItem> getOrderItems() {
     return orderItems;
   }
 

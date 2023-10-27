@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.nio.file.FileAlreadyExistsException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javafx.collections.ObservableList;
 import nl.com.wimmusic.model.*;
 import nl.com.wimmusic.model.Order;
 
@@ -102,7 +104,7 @@ public class Database implements Serializable {
     return products;
   }
 
-  public List<Order> getOrders() {
+  public ObservableList<Order> getOrders() {
     return orders;
   }
 
