@@ -133,11 +133,9 @@ public class Database implements Serializable {
   public void updateProductStock(Product product, int quantity) {
     int newStock = product.getStock() - quantity;
     if (newStock < 0) {
-
-
-        } else {
+      return;
+        }
         product.setStock(newStock);
-    }
     saveDatabase();
   }
 }

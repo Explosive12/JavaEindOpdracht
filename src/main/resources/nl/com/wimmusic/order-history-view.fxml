@@ -14,7 +14,7 @@
         </Label>
         <TableView fx:id="orderTableView" layoutX="26.0" layoutY="67.0" prefHeight="201.0" prefWidth="714.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="Date/Time">
+                <TableColumn prefWidth="300.0" text="Date/Time">
                     <cellValueFactory>
                         <PropertyValueFactory property="orderDate" />
                     </cellValueFactory>

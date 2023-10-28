@@ -1,6 +1,8 @@
 package nl.com.wimmusic.model;
 
-public class OrderItem {
+import java.io.Serializable;
+
+public class OrderItem implements Serializable {
   private int quantity;
   private Product product;
 

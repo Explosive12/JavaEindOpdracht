@@ -30,7 +30,7 @@ public class OrderHistoryController extends BaseController implements Initializa
         return;
       }
       productTableView.getItems().clear();
-      productTableView.setItems(newOrder.getOrderItems());
+        productTableView.getItems().addAll(newOrder.getOrderItems());
     });
   }
 }

@@ -38,7 +38,7 @@ public class OrderController extends BaseController implements Initializable {
   public void initialize(URL url, ResourceBundle resourceBundle) {
     errorTextBoxLabel.setVisible(false);
 
-    orderItems = FXCollections.observableArrayList(order.getOrderItems());
+    orderItems = FXCollections.observableList(order.getOrderItems());
     productTableView.setItems(orderItems);
   }
 
@@ -73,13 +73,13 @@ public class OrderController extends BaseController implements Initializable {
     errorTextBoxLabel.setVisible(false);
 
     order.setCustomer(createCustomer());
+    List<OrderItem> orderItems = order.getOrderItems();
 
     loadDialog(
-        "order-confirmation-view.fxml",
+        "confirm-order-dialog-view.fxml",
         new ConfirmOrderDialogController(user, database, order),
         "Wim's Music Dungeon - Order Confirmation");
     System.out.println("Order created");
-    loadScene("create-order-view.fxml", new OrderController(user, database));
   }
 
   private boolean filledIn() {
@@ -96,6 +96,4 @@ public class OrderController extends BaseController implements Initializable {
         emailLabelField.getText(),
         phoneNumberField.getText());
   }
-
-
 }

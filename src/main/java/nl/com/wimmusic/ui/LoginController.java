@@ -55,16 +55,20 @@ public class LoginController {
   }
 
   private void login(String username, String password) {
-    for (User user : userList) {
-      if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
-        System.out.println("Login successful");
-        Stage stage = (Stage) loginButton.getScene().getWindow();
-        stage.close();
-        loadWimMusic(user);
-        return;
+    try {
+      for (User user : userList) {
+        if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
+          System.out.println("Login successful");
+          Stage stage = (Stage) loginButton.getScene().getWindow();
+          stage.close();
+          loadWimMusic(user);
+          return;
+        }
       }
+      loginFailedLabel.setVisible(true);
+      } catch (Exception e) {
+      loginFailedLabel.setVisible(true);
     }
-    loginFailedLabel.setVisible(true);
   }
 
   private void loadWimMusic(User user) {

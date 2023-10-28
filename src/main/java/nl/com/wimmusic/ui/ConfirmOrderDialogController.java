@@ -9,6 +9,8 @@ import nl.com.wimmusic.model.Order;
 import nl.com.wimmusic.model.OrderItem;
 import nl.com.wimmusic.model.User;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ConfirmOrderDialogController extends BaseController {
@@ -16,26 +18,33 @@ public class ConfirmOrderDialogController extends BaseController {
   @FXML private Button noButton;
   @FXML private Label errorLabel;
 
+
   public ConfirmOrderDialogController(User user, Database database, Order order) {
     super(user, database);
     this.order = order;
   }
 
   @FXML
-  void onYesButtonClicked() {
+  void onYesButton() {
     List<OrderItem> orderItems = order.getOrderItems();
 
     for (OrderItem orderItem : orderItems) {
-      int newStock = orderItem.getProduct().getStock() - orderItem.getQuantity();
-      if (newStock < 0) {
-        errorLabel.setText(errorLabel.getText() + "Not enough stock for " + orderItem.getProduct().getName() + "\n");
-        errorLabel.setVisible(true);
-        return;
-      }
+      try {
+        int newStock = orderItem.getProduct().getStock() - orderItem.getQuantity();
+        if (newStock < 0) {
+          errorLabel.setText(errorLabel.getText() + "Not enough stock for " + orderItem.getProduct().getName() + "\n");
+          errorLabel.setVisible(true);
+          return;
+          }
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
       database.updateProductStock(orderItem.getProduct(), orderItem.getQuantity());
     }
 
     order.setOrderDate();
+
+
     database.addOrder(order);
     closeWindow();
   }
@@ -46,7 +55,7 @@ public class ConfirmOrderDialogController extends BaseController {
   }
 
   @FXML
-  void onNoButtonClicked() {
+  void onNoButton() {
     closeWindow();
   }
 }
